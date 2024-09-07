@@ -1,28 +1,21 @@
 <!DOCTYPE html>
 <html lang="en" class="light scroll-smooth" dir="ltr">
-
-
-<!-- Mirrored from shreethemes.in/techwind/layouts/index-personal.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 27 Aug 2022 16:41:21 GMT -->
-
-<head>
+  <!-- Mirrored from shreethemes.in/techwind/layouts/index-personal.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 27 Aug 2022 16:41:21 GMT -->
+  <head>
     <meta charset="UTF-8" />
     <title>Belajar Prancis - Anah</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-    <meta name="description"
-        content="Home service salon with Naila Adam. Transform your look and feel confident with our expert beauty team." />
+    <meta name="description" content="Home service salon with Naila Adam. Transform your look and feel confident with our expert beauty team." />
     <meta name="keywords" content="home service salon, appointment booking, WhatsApp, beauty services, depok, jakarta">
     <meta name="author" content="z-anah" />
     <meta name="website" content="https://z-anah.github.io/link-tree/" />
     <meta name="email" content="zulmianah@gmail.com" />
-    <meta data-rh="true" name="twitter:image:src"
-        content="https://z-anah.github.io/naila/assets/images/naila-thumbnail.png">
+    <meta data-rh="true" name="twitter:image:src" content="https://z-anah.github.io/naila/assets/images/naila-thumbnail.png">
     <meta data-rh="true" property="og:image" content="https://z-anah.github.io/naila/assets/images/naila-thumbnail.png">
     <meta name="version" content="1.0.0" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-
     <!-- favicon -->
     <link rel="shortcut icon" href="assets/images/favicon.ico" />
-
     <!-- Css -->
     <link href="assets/libs/tobii/css/tobii.min.css?v=0.0.11" rel="stylesheet">
     <link href="assets/libs/tiny-slider/tiny-slider.css" rel="stylesheet">
@@ -30,553 +23,545 @@
     <link href="assets/libs/%40iconscout/unicons/css/line.css?v=0.0.11" type="text/css" rel="stylesheet" />
     <link rel="stylesheet" href="assets/css/icons.min.css?v=0.0.11" />
     <link rel="stylesheet" href="assets/css/tailwind.min.css?v=0.0.11" />
-
-</head>
-
-<body class="font-nunito text-base text-black dark:text-white dark:bg-slate-900">
-
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-firestore.js"></script>
+    <script src="assets/js/firebase.js"></script>
+    <script src="assets/js/firestore/about.firestore.js"></script>
+    <script src="assets/js/firestore/bab.firestore.js"></script>
+    <!-- <script src="https://open.spotify.com/embed-podcast/iframe-api/v1" async></script><script src="assets/js/spotify/index.js"></script> -->
+  </head>
+  <body class="font-nunito text-base text-black dark:text-white dark:bg-slate-900">
     <!-- Loader Start -->
-    <!-- <div id="preloader">
-                <div id="status">
-                    <div class="spinner">
-                        <div class="double-bounce1"></div>
-                        <div class="double-bounce2"></div>
-                    </div>
-                </div>
-            </div> -->
+    <!-- <div id="preloader"><div id="status"><div class="spinner"><div class="double-bounce1"></div><div class="double-bounce2"></div></div></div></div> -->
     <!-- Loader End -->
-
     <!-- Start Navbar -->
     <nav id="topnav" class="defaultscroll is-sticky">
-        <div class="container">
-            <!-- Logo container-->
-            <a class="logo pl-0" href="#">
-                <img src="assets/images/logo-dark.png" class="inline-block dark:hidden" alt="">
-                <img src="assets/images/logo-light.png" class="hidden dark:inline-block" alt="">
+      <div class="container">
+        <!-- Logo container-->
+        <a class="logo pl-0" href="#">
+          <img src="assets/images/logo-dark.png" class="inline-block dark:hidden" alt="">
+          <img src="assets/images/logo-light.png" class="hidden dark:inline-block" alt="">
+        </a>
+        <!-- End Logo container-->
+        <div class="menu-extras">
+          <div class="menu-item">
+            <!-- Mobile menu toggle-->
+            <a class="navbar-toggle" id="isToggle" onclick="toggleMenu()">
+              <div class="lines">
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
             </a>
-
-            <!-- End Logo container-->
-            <div class="menu-extras">
-                <div class="menu-item">
-                    <!-- Mobile menu toggle-->
-                    <a class="navbar-toggle" id="isToggle" onclick="toggleMenu()">
-                        <div class="lines">
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                        </div>
-                    </a>
-                    <!-- End mobile menu toggle-->
-                </div>
-            </div>
-
-            <div id="navigation">
-                <!-- Navigation Menu-->
-                <ul class="navigation-menu">
-                    <li><a href="#tentang-saya" class="sub-menu-item">Tentang Saya</a></li>
-                    <li><a href="#materi-belajar" class="sub-menu-item">Materi Belajar</a></li>
-                    <!-- <li><a href="#Blog" class="sub-menu-item">Blog</a></li> -->
-                    <li><a href="#kontak" class="sub-menu-item">Kontak</a></li>
-                    <!-- <li><a href="#Sumber Belajar" class="sub-menu-item">Sumber Belajar</a></li> -->
-                    <li><a href="#testimoni" class="sub-menu-item">Testimoni</a></li>
-                    <li><a href="#faq" class="sub-menu-item">FAQ</a></li>
-                </ul><!--end navigation menu-->
-            </div><!--end navigation-->
-        </div><!--end container-->
-    </nav><!--end header-->
-    <section
-        class="relative table w-full py-32 lg:py-40 bg-gradient-to-br to-orange-600/20 via-fuchsia-600/20 from-indigo-600/20">
-        <div class="container">
-            <div class="grid grid-cols-1 text-center mt-10">
-                <h3 class="text-3xl leading-normal font-medium">Belajar Prancis</h3>
-                <!-- <h5 class="text-white/50 text-lg font-medium">Petualangan Bahasa Perancis bersama Anah</h5> -->
-            </div><!--end grid-->
-            
-        </div><!--end container-->
-        <div class="absolute text-center z-10 bottom-5 right-0 left-0 mx-3">
-            <ul class="breadcrumb tracking-[0.5px] mb-0 inline-block">
-                <li
-                    class="inline breadcrumb-item uppercase text-[13px] font-bold duration-500 ease-in-out hover:text-indigo-600">
-                    Petualangan Bahasa Perancis bersama Anah
-                </li>
-            </ul>
+            <!-- End mobile menu toggle-->
+          </div>
         </div>
+        <div id="navigation">
+          <!-- Navigation Menu-->
+          <ul class="navigation-menu">
+            <li>
+              <a href="#tentang-saya" class="sub-menu-item">Tentang Saya</a>
+            </li>
+            <li>
+              <a href="#materi-belajar" class="sub-menu-item">Materi Belajar</a>
+            </li>
+            <!-- <li><a href="#Blog" class="sub-menu-item">Blog</a></li> -->
+            <li>
+              <a href="#kontak" class="sub-menu-item">Kontak</a>
+            </li>
+            <!-- <li><a href="#Sumber Belajar" class="sub-menu-item">Sumber Belajar</a></li> -->
+            <li>
+              <a href="#testimoni" class="sub-menu-item">Testimoni</a>
+            </li>
+            <li>
+              <a href="#faq" class="sub-menu-item">FAQ</a>
+            </li>
+          </ul>
+          <!--end navigation menu-->
+        </div>
+        <!--end navigation-->
+      </div>
+      <!--end container-->
+    </nav>
+    <!--end header-->
+    <section class="relative table w-full py-32 lg:py-40 bg-gradient-to-br to-orange-600/20 via-fuchsia-600/20 from-indigo-600/20">
+      <div class="container">
+        <div class="grid grid-cols-1 text-center mt-10">
+          <h3 class="text-3xl leading-normal font-medium">Belajar Prancis</h3>
+          <!-- <h5 class="text-white/50 text-lg font-medium">Petualangan Bahasa Perancis bersama Anah</h5> -->
+        </div>
+        <!--end grid-->
+      </div>
+      <!--end container-->
+      <div class="absolute text-center z-10 bottom-5 right-0 left-0 mx-3">
+        <ul class="breadcrumb tracking-[0.5px] mb-0 inline-block">
+          <li class="inline breadcrumb-item uppercase text-[13px] font-bold duration-500 ease-in-out hover:text-indigo-600"> Petualangan Bahasa Perancis bersama Anah </li>
+        </ul>
+      </div>
     </section>
     <div class="relative">
-        <div
-            class="shape absolute right-0 sm:-bottom-px -bottom-[2px] left-0 overflow-hidden z-1 text-white dark:text-slate-900">
-            <svg class="w-full h-auto" viewBox="0 0 2880 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M0 48H1437.5H2880V0H2160C1442.5 52 720 0 720 0H0V48Z" fill="currentColor"></path>
-            </svg>
-        </div>
+      <div class="shape absolute right-0 sm:-bottom-px -bottom-[2px] left-0 overflow-hidden z-1 text-white dark:text-slate-900">
+        <svg class="w-full h-auto" viewBox="0 0 2880 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M0 48H1437.5H2880V0H2160C1442.5 52 720 0 720 0H0V48Z" fill="currentColor"></path>
+        </svg>
+      </div>
     </div>
     <!-- Start Section-->
     <section id="tentang-saya" class="relative md:py-24 py-16">
-        <div class="container">
-            <div class="grid md:grid-cols-12 grid-cols-1 items-center gap-[30px]">
-                <div class="lg:col-span-5 md:col-span-6">
-                    <div class="grid grid-cols-12 gap-6 items-center">
-                        <div class="col-span-6">
-                            <div class="grid grid-cols-1 gap-6">
-                                <img src="assets/images/about/ab03.png" class="shadow rounded-md" alt="">
-                                <img src="assets/images/about/ab02.png" class="shadow rounded-md" alt="">
-                            </div>
-                        </div>
-
-                        <div class="col-span-6">
-                            <div class="grid grid-cols-1 gap-6">
-                                <img src="assets/images/about/ab01.png" class="shadow rounded-md" alt="">
-                            </div>
-                        </div>
-                    </div>
+      <div class="container">
+        <div class="grid md:grid-cols-12 grid-cols-1 items-center gap-[30px]">
+          <div class="lg:col-span-5 md:col-span-6">
+            <div class="grid grid-cols-12 gap-6 items-center">
+              <div class="col-span-6">
+                <div class="grid grid-cols-1 gap-6">
+                  <img src="assets/images/about/ab03.png" class="shadow rounded-md" alt="">
+                  <img src="assets/images/about/ab02.png" class="shadow rounded-md" alt="">
                 </div>
-
-                <div class="lg:col-span-7 md:col-span-6">
-                    <div class="lg:ml-5">
-                        <h3 class="mb-6 md:text-3xl text-2xl md:leading-normal leading-normal font-semibold">Tentang
-                            Anah
-                        </h3>
-
-                        <p class="text-slate-400 max-w-xl">
-                            Besar di negara francophone. Tamatan dari Université Côte D'Azur, meraih gelar Master II:
-                            Mobiquité, Big Data et intégration de Système.
-                            Kemudian, mulai mengajar bahasa Prancis secara privat sejak 2021.
-                            Sebagai wiraswasta, Anah berkomunikasi dengan berbagai customer francophone.</p>
-                        <div class="mt-6">
-                            <a href="#kontak"
-                                class="btn bg-indigo-600 hover:bg-indigo-700 border-indigo-600 hover:border-indigo-700 text-white rounded-md mr-2 mt-2"><i
-                                    class="uil uil-envelope"></i> Contact us</a>
-                        </div>
-                    </div>
+              </div>
+              <div class="col-span-6">
+                <div class="grid grid-cols-1 gap-6">
+                  <img src="assets/images/about/ab01.png" class="shadow rounded-md" alt="">
                 </div>
-            </div><!--end grid-->
-        </div><!--end container-->
-    </section><!--end section-->
-    <section id="materi-belajar" class="relative flex items-center md:py-72 py-44" data-jarallax='{"speed": 0.5}'
-        style="background: url('assets/images/smartwatch/bg2.png') center no-repeat;"></section>
+              </div>
+            </div>
+          </div>
+          <div class="lg:col-span-7 md:col-span-6">
+            <div class="lg:ml-5">
+              <h3 class="mb-6 md:text-3xl text-2xl md:leading-normal leading-normal font-semibold" id="firebase-about-title"></h3>
+              <p class="text-slate-400 max-w-xl" id="firebase-about-description"></p>
+              <div class="mt-6">
+                <a href="#kontak" class="btn bg-indigo-600 hover:bg-indigo-700 border-indigo-600 hover:border-indigo-700 text-white rounded-md mr-2 mt-2">
+                  <i class="uil uil-envelope"></i> Contact us </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--end grid-->
+      </div>
+      <!--end container-->
+    </section>
+    <!--end section-->
+    <section id="materi-belajar" class="relative flex items-center md:py-72 py-44" data-jarallax='{"speed": 0.5}' style="background: url('assets/images/smartwatch/bg2.png') center no-repeat;"></section>
     <!-- End -->
     <!-- Start Section-->
     <section class="relative md:py-24 py-16 overflow-hidden">
-        <div class="grid grid-cols-1 pb-8 text-center">
-            <h3 class="mb-4 md:text-3xl md:leading-normal text-2xl leading-normal font-semibold">Apa saja yang akan
-                dipelajari?</h3>
-            <p class="text-slate-400 max-w-xl mx-auto">Materi-materi yang dibahas dalam modul Belajar Prancis.
-                Materi pembelajaran berupa teks, audio, video, dan latihan.</p>
-
-        </div><!--end grid-->
-
-        <div class="container md:mt-24 mt-16">
-            <div class="grid md:grid-cols-2 grid-cols-1 items-center mt-16 gap-[30px]">
-                <div class="lg:ml-8">
-                    <h4 class="mb-4 text-2xl leading-normal font-medium">Bab 1: Mari Kita Mulai! - Allons-y!</h4>
-                    <ul class="list-none text-slate-400 mt-4">
-                        <li class="mb-1 flex"><i class="uil uil-check-circle text-indigo-600 text-xl mr-2"></i> Mengenal
-                            Bahasa Perancis: A la rencontre du français</li>
-                        <li class="mb-1 flex"><i class="uil uil-check-circle text-indigo-600 text-xl mr-2"></i> Alfabet:
-                            L’alphabet</li>
-                        <li class="mb-1 flex"><i class="uil uil-check-circle text-indigo-600 text-xl mr-2"></i> Kosakata
-                            Penting: Vocabulaire de base</li>
-                        <li class="mb-1 flex"><i class="uil uil-check-circle text-indigo-600 text-xl mr-2"></i> Ejaan
-                            dan Pelafalan: Orthographe et prononciation</li>
-                        <li class="mb-1 flex"><i class="uil uil-check-circle text-indigo-600 text-xl mr-2"></i>
-                            Angka-angka: Les chiffres</li>
-                        <li class="mb-1 flex"><i class="uil uil-check-circle text-indigo-600 text-xl mr-2"></i> Kata
-                            Benda: Les noms</li>
-                        <li class="mb-1 flex"><i class="uil uil-check-circle text-indigo-600 text-xl mr-2"></i> Kata
-                            Kerja: Les verbes</li>
-                    </ul>
-                </div>
-                <div class="lg:ml-8">
-                    <h4 class="mb-4 text-2xl leading-normal font-medium">Bab 2: Waktu dan Tanggal: L’heure et les dates
-                    </h4>
-                    <ul class="list-none text-slate-400 mt-4">
-                        <li class="mb-1 flex"><i class="uil uil-check-circle text-indigo-600 text-xl mr-2"></i>
-                            Mengatakan Waktu: Disons l’heure</li>
-                        <li class="mb-1 flex"><i class="uil uil-check-circle text-indigo-600 text-xl mr-2"></i> Bertanya
-                            tentang Waktu: Demander l’heure</li>
-                        <li class="mb-1 flex"><i class="uil uil-check-circle text-indigo-600 text-xl mr-2"></i> Hari,
-                            Bulan, dan Tahun: Les jours, les mois, et les années</li>
-                        <li class="mb-1 flex"><i class="uil uil-check-circle text-indigo-600 text-xl mr-2"></i> Apa
-                            Tanggal Hari Ini?: Quelle est la date d’aujourd’hui?</li>
-                        <li class="mb-1 flex"><i class="uil uil-check-circle text-indigo-600 text-xl mr-2"></i> Bagian
-                            dari Hari dan Tahun: Les moments de la journée et de l’année</li>
-                        <li class="mb-1 flex"><i class="uil uil-check-circle text-indigo-600 text-xl mr-2"></i> Cuaca:
-                            Le temps</li>
-                        <li class="mb-1 flex"><i class="uil uil-check-circle text-indigo-600 text-xl mr-2"></i> Hari
-                            Libur dan Ulang Tahun: Fêtes et anniversaires</li>
-                        <li class="mb-1 flex"><i class="uil uil-check-circle text-indigo-600 text-xl mr-2"></i>
-                            Pertanyaan tentang Waktu: Questions sur la date et le temps</li>
-                    </ul>
-                </div>
-                <div class="lg:ml-8">
-                    <h4 class="mb-4 text-2xl leading-normal font-medium">Bab 3: Semua Tentang Saya: Tout sur moi</h4>
-                    <ul class="list-none text-slate-400 mt-4">
-                        <li class="mb-1 flex"><i class="uil uil-check-circle text-indigo-600 text-xl mr-2"></i>
-                            Menggambarkan Diri Saya: Je me décris</li>
-                        <li class="mb-1 flex"><i class="uil uil-check-circle text-indigo-600 text-xl mr-2"></i>
-                            Kepribadian Saya: Mon caractère</li>
-                        <li class="mb-1 flex"><i class="uil uil-check-circle text-indigo-600 text-xl mr-2"></i> Tempat
-                            Tinggal Saya: L’endroit où je vis</li>
-                        <li class="mb-1 flex"><i class="uil uil-check-circle text-indigo-600 text-xl mr-2"></i> Keluarga
-                            Saya: Ma famille</li>
-                        <li class="mb-1 flex"><i class="uil uil-check-circle text-indigo-600 text-xl mr-2"></i> Sekolah
-                            Saya: Mon école</li>
-                        <li class="mb-1 flex"><i class="uil uil-check-circle text-indigo-600 text-xl mr-2"></i>
-                            Teman-Teman Saya: Mes camarades</li>
-                    </ul>
-                </div>
-                <div class="lg:ml-8">
-                    <h4 class="mb-4 text-2xl leading-normal font-medium">Bab 4: Kehidupan Sosial: La vie sociale</h4>
-                    <ul class="list-none text-slate-400 mt-4">
-                        <li class="mb-1 flex"><i class="uil uil-check-circle text-indigo-600 text-xl mr-2"></i> Hai! Apa
-                            Kabar?: Salut! Ça va?</li>
-                        <li class="mb-1 flex"><i class="uil uil-check-circle text-indigo-600 text-xl mr-2"></i> Sapa
-                            teman: Saluer les amis</li>
-                        <li class="mb-1 flex"><i class="uil uil-check-circle text-indigo-600 text-xl mr-2"></i> Tolong
-                            dan Terima Kasih: S’il te plaît et merci</li>
-                        <li class="mb-1 flex"><i class="uil uil-check-circle text-indigo-600 text-xl mr-2"></i>
-                            Mengundang Teman: Inviter des amis</li>
-                        <li class="mb-1 flex"><i class="uil uil-check-circle text-indigo-600 text-xl mr-2"></i>
-                            Bertanya: Poser des questions</li>
-                        <li class="mb-1 flex"><i class="uil uil-check-circle text-indigo-600 text-xl mr-2"></i>
-                            Mengucapkan Selamat Tinggal: Dire au revoir</li>
-                    </ul>
-                </div>
-
-                <div class="lg:ml-8">
-                    <h4 class="mb-4 text-2xl leading-normal font-medium">Bab 5: Ngapain yuk?: Que faire?</h4>
-                    <ul class="list-none text-slate-400 mt-4">
-                        <li class="mb-1 flex"><i class="uil uil-check-circle text-indigo-600 text-xl mr-2"></i>
-                            Bersepeda: Faire du vélo</li>
-                        <li class="mb-1 flex"><i class="uil uil-check-circle text-indigo-600 text-xl mr-2"></i> Bermain:
-                            Jouer à des jeux</li>
-                        <li class="mb-1 flex"><i class="uil uil-check-circle text-indigo-600 text-xl mr-2"></i> Di
-                            Taman: Au parc</li>
-                        <li class="mb-1 flex"><i class="uil uil-check-circle text-indigo-600 text-xl mr-2"></i> Di
-                            Museum: Au musée</li>
-                        <li class="mb-1 flex"><i class="uil uil-check-circle text-indigo-600 text-xl mr-2"></i>
-                            Berolahraga: Faire du sport</li>
-                        <li class="mb-1 flex"><i class="uil uil-check-circle text-indigo-600 text-xl mr-2"></i> Di
-                            Bioskop: Au cinéma</li>
-                    </ul>
-                </div>
-                <div class="lg:ml-8">
-                    <h4 class="mb-4 text-2xl leading-normal font-medium">Bab 6: Aku Lapar!: J’ai faim!</h4>
-                    <ul class="list-none text-slate-400 mt-4">
-                        <li class="mb-1 flex"><i class="uil uil-check-circle text-indigo-600 text-xl mr-2"></i> Di
-                            Dapur: Dans la cuisine</li>
-                        <li class="mb-1 flex"><i class="uil uil-check-circle text-indigo-600 text-xl mr-2"></i>
-                            Menyiapkan Makanan: Préparer un repas</li>
-                        <li class="mb-1 flex"><i class="uil uil-check-circle text-indigo-600 text-xl mr-2"></i> Minuman:
-                            Les boissons</li>
-                        <li class="mb-1 flex"><i class="uil uil-check-circle text-indigo-600 text-xl mr-2"></i> Di Meja
-                            Makan: A table</li>
-                        <li class="mb-1 flex"><i class="uil uil-check-circle text-indigo-600 text-xl mr-2"></i> Di
-                            Restoran: Au restaurant</li>
-                        <li class="mb-1 flex"><i class="uil uil-check-circle text-indigo-600 text-xl mr-2"></i> Wah,
-                            Enak Sekali!: Miam, miam, c’est bon!</li>
-                    </ul>
-                </div>
-                <div class="lg:ml-8">
-                    <h4 class="mb-4 text-2xl leading-normal font-medium">Bab 7: Pergi ke Kota: Aller en ville</h4>
-                    <ul class="list-none text-slate-400 mt-4">
-                        <li class="mb-1 flex"><i class="uil uil-check-circle text-indigo-600 text-xl mr-2"></i>
-                            Transportasi: Les transports</li>
-                        <li class="mb-1 flex"><i class="uil uil-check-circle text-indigo-600 text-xl mr-2"></i> Bertanya
-                            Arah: Demander son chemin</li>
-                        <li class="mb-1 flex"><i class="uil uil-check-circle text-indigo-600 text-xl mr-2"></i>
-                            Menghabiskan Uang: Dépenser de l’argent</li>
-                        <li class="mb-1 flex"><i class="uil uil-check-circle text-indigo-600 text-xl mr-2"></i> Menjaga
-                            Uang Anda: Garder son argent en securité</li>
-                        <li class="mb-1 flex"><i class="uil uil-check-circle text-indigo-600 text-xl mr-2"></i> Minta
-                            Bantuan: Demander de l’aide</li>
-                        <li class="mb-1 flex"><i class="uil uil-check-circle text-indigo-600 text-xl mr-2"></i>
-                            Kegiatan: Activités</li>
-                    </ul>
-                </div>
-                <div class="lg:ml-8">
-                    <h4 class="mb-4 text-2xl leading-normal font-medium">Bab 8: Ayo ke Luar: Allons dehors</h4>
-                    <ul class="list-none text-slate-400 mt-4">
-                        <li class="mb-1 flex"><i class="uil uil-check-circle text-indigo-600 text-xl mr-2"></i> Di
-                            Taman: Dans le jardin</li>
-                        <li class="mb-1 flex"><i class="uil uil-check-circle text-indigo-600 text-xl mr-2"></i> Pohon
-                            dan Bunga: Arbres et fleurs</li>
-                        <li class="mb-1 flex"><i class="uil uil-check-circle text-indigo-600 text-xl mr-2"></i> Di
-                            Pantai: A la plage</li>
-                        <li class="mb-1 flex"><i class="uil uil-check-circle text-indigo-600 text-xl mr-2"></i> Di
-                            Sungai: Au bord de la rivière</li>
-                        <li class="mb-1 flex"><i class="uil uil-check-circle text-indigo-600 text-xl mr-2"></i> Di Kebun
-                            Binatang: Au zoo</li>
-                        <li class="mb-1 flex"><i class="uil uil-check-circle text-indigo-600 text-xl mr-2"></i> Di
-                            Ternak: A la ferme</li>
-                    </ul>
-                </div>
-
-                <div class="lg:ml-8">
-                    <h4 class="mb-4 text-2xl leading-normal font-medium">Bab 9: Berhubungan: Bien s’entendre</h4>
-                    <ul class="list-none text-slate-400 mt-4">
-                        <li class="mb-1 flex"><i class="uil uil-check-circle text-indigo-600 text-xl mr-2"></i> Sahabat:
-                            Les meilleurs amis</li>
-                        <li class="mb-1 flex"><i class="uil uil-check-circle text-indigo-600 text-xl mr-2"></i>
-                            Mengekspresikan Perasaan: Exprimer ses sentiments</li>
-                        <li class="mb-1 flex"><i class="uil uil-check-circle text-indigo-600 text-xl mr-2"></i>
-                            Menghormati Teman: Respecter ses amis</li>
-                        <li class="mb-1 flex"><i class="uil uil-check-circle text-indigo-600 text-xl mr-2"></i>
-                            Menyelesaikan Masalah: Régler des problèmes</li>
-                        <li class="mb-1 flex"><i class="uil uil-check-circle text-indigo-600 text-xl mr-2"></i>
-                            Berdamai: Se réconcilier</li>
-                        <li class="mb-1 flex"><i class="uil uil-check-circle text-indigo-600 text-xl mr-2"></i> Pacar:
-                            Amoureux et amoureuses</li>
-                    </ul>
-                </div>
-
-            </div>
-        </div><!--end container-->
-
-    </section><!--end section-->
+      <div class="grid grid-cols-1 pb-8 text-center">
+        <h3 class="mb-4 md:text-3xl md:leading-normal text-2xl leading-normal font-semibold">Apa saja yang akan dipelajari? </h3>
+        <p class="text-slate-400 max-w-xl mx-auto">Materi-materi yang dibahas dalam modul Belajar Prancis. Materi pembelajaran berupa teks, audio, video, dan latihan. </p>
+      </div>
+      <!--end grid-->
+      <div class="container md:mt-24 mt-16">
+        <div class="grid md:grid-cols-2 grid-cols-1 items-center mt-16 gap-[30px]">
+          <div class="lg:ml-8">
+            <h4 class="mb-4 text-2xl leading-normal font-medium">Bab 1: Mari Kita Mulai! - Allons-y!</h4>
+            <ul class="list-none text-slate-400 mt-4">
+              <li class="mb-1 flex">
+                <i class="uil uil-check-circle text-indigo-600 text-xl mr-2"></i> Mengenal Bahasa Perancis: A la rencontre du français
+              </li>
+              <li class="mb-1 flex">
+                <i class="uil uil-check-circle text-indigo-600 text-xl mr-2"></i> Alfabet: L’alphabet
+              </li>
+              <li class="mb-1 flex">
+                <i class="uil uil-check-circle text-indigo-600 text-xl mr-2"></i> Kosakata Penting: Vocabulaire de base
+              </li>
+              <li class="mb-1 flex">
+                <i class="uil uil-check-circle text-indigo-600 text-xl mr-2"></i> Ejaan dan Pelafalan: Orthographe et prononciation
+              </li>
+              <li class="mb-1 flex">
+                <i class="uil uil-check-circle text-indigo-600 text-xl mr-2"></i> Angka-angka: Les chiffres
+              </li>
+              <li class="mb-1 flex">
+                <i class="uil uil-check-circle text-indigo-600 text-xl mr-2"></i> Kata Benda: Les noms
+              </li>
+              <li class="mb-1 flex">
+                <i class="uil uil-check-circle text-indigo-600 text-xl mr-2"></i> Kata Kerja: Les verbes
+              </li>
+            </ul>
+          </div>
+          <div class="lg:ml-8">
+            <h4 class="mb-4 text-2xl leading-normal font-medium">Bab 2: Waktu dan Tanggal: L’heure et les dates </h4>
+            <ul class="list-none text-slate-400 mt-4">
+              <li class="mb-1 flex">
+                <i class="uil uil-check-circle text-indigo-600 text-xl mr-2"></i> Mengatakan Waktu: Disons l’heure
+              </li>
+              <li class="mb-1 flex">
+                <i class="uil uil-check-circle text-indigo-600 text-xl mr-2"></i> Bertanya tentang Waktu: Demander l’heure
+              </li>
+              <li class="mb-1 flex">
+                <i class="uil uil-check-circle text-indigo-600 text-xl mr-2"></i> Hari, Bulan, dan Tahun: Les jours, les mois, et les années
+              </li>
+              <li class="mb-1 flex">
+                <i class="uil uil-check-circle text-indigo-600 text-xl mr-2"></i> Apa Tanggal Hari Ini?: Quelle est la date d’aujourd’hui?
+              </li>
+              <li class="mb-1 flex">
+                <i class="uil uil-check-circle text-indigo-600 text-xl mr-2"></i> Bagian dari Hari dan Tahun: Les moments de la journée et de l’année
+              </li>
+              <li class="mb-1 flex">
+                <i class="uil uil-check-circle text-indigo-600 text-xl mr-2"></i> Cuaca: Le temps
+              </li>
+              <li class="mb-1 flex">
+                <i class="uil uil-check-circle text-indigo-600 text-xl mr-2"></i> Hari Libur dan Ulang Tahun: Fêtes et anniversaires
+              </li>
+              <li class="mb-1 flex">
+                <i class="uil uil-check-circle text-indigo-600 text-xl mr-2"></i> Pertanyaan tentang Waktu: Questions sur la date et le temps
+              </li>
+            </ul>
+          </div>
+          <div class="lg:ml-8">
+            <h4 class="mb-4 text-2xl leading-normal font-medium">Bab 3: Semua Tentang Saya: Tout sur moi</h4>
+            <ul class="list-none text-slate-400 mt-4">
+              <li class="mb-1 flex">
+                <i class="uil uil-check-circle text-indigo-600 text-xl mr-2"></i> Menggambarkan Diri Saya: Je me décris
+              </li>
+              <li class="mb-1 flex">
+                <i class="uil uil-check-circle text-indigo-600 text-xl mr-2"></i> Kepribadian Saya: Mon caractère
+              </li>
+              <li class="mb-1 flex">
+                <i class="uil uil-check-circle text-indigo-600 text-xl mr-2"></i> Tempat Tinggal Saya: L’endroit où je vis
+              </li>
+              <li class="mb-1 flex">
+                <i class="uil uil-check-circle text-indigo-600 text-xl mr-2"></i> Keluarga Saya: Ma famille
+              </li>
+              <li class="mb-1 flex">
+                <i class="uil uil-check-circle text-indigo-600 text-xl mr-2"></i> Sekolah Saya: Mon école
+              </li>
+              <li class="mb-1 flex">
+                <i class="uil uil-check-circle text-indigo-600 text-xl mr-2"></i> Teman-Teman Saya: Mes camarades
+              </li>
+            </ul>
+          </div>
+          <div class="lg:ml-8">
+            <h4 class="mb-4 text-2xl leading-normal font-medium">Bab 4: Kehidupan Sosial: La vie sociale</h4>
+            <ul class="list-none text-slate-400 mt-4">
+              <li class="mb-1 flex">
+                <i class="uil uil-check-circle text-indigo-600 text-xl mr-2"></i> Hai! Apa Kabar?: Salut! Ça va?
+              </li>
+              <li class="mb-1 flex">
+                <i class="uil uil-check-circle text-indigo-600 text-xl mr-2"></i> Sapa teman: Saluer les amis
+              </li>
+              <li class="mb-1 flex">
+                <i class="uil uil-check-circle text-indigo-600 text-xl mr-2"></i> Tolong dan Terima Kasih: S’il te plaît et merci
+              </li>
+              <li class="mb-1 flex">
+                <i class="uil uil-check-circle text-indigo-600 text-xl mr-2"></i> Mengundang Teman: Inviter des amis
+              </li>
+              <li class="mb-1 flex">
+                <i class="uil uil-check-circle text-indigo-600 text-xl mr-2"></i> Bertanya: Poser des questions
+              </li>
+              <li class="mb-1 flex">
+                <i class="uil uil-check-circle text-indigo-600 text-xl mr-2"></i> Mengucapkan Selamat Tinggal: Dire au revoir
+              </li>
+            </ul>
+          </div>
+          <div class="lg:ml-8">
+            <h4 class="mb-4 text-2xl leading-normal font-medium">Bab 5: Ngapain yuk?: Que faire?</h4>
+            <ul class="list-none text-slate-400 mt-4">
+              <li class="mb-1 flex">
+                <i class="uil uil-check-circle text-indigo-600 text-xl mr-2"></i> Bersepeda: Faire du vélo
+              </li>
+              <li class="mb-1 flex">
+                <i class="uil uil-check-circle text-indigo-600 text-xl mr-2"></i> Bermain: Jouer à des jeux
+              </li>
+              <li class="mb-1 flex">
+                <i class="uil uil-check-circle text-indigo-600 text-xl mr-2"></i> Di Taman: Au parc
+              </li>
+              <li class="mb-1 flex">
+                <i class="uil uil-check-circle text-indigo-600 text-xl mr-2"></i> Di Museum: Au musée
+              </li>
+              <li class="mb-1 flex">
+                <i class="uil uil-check-circle text-indigo-600 text-xl mr-2"></i> Berolahraga: Faire du sport
+              </li>
+              <li class="mb-1 flex">
+                <i class="uil uil-check-circle text-indigo-600 text-xl mr-2"></i> Di Bioskop: Au cinéma
+              </li>
+            </ul>
+          </div>
+          <div class="lg:ml-8">
+            <h4 class="mb-4 text-2xl leading-normal font-medium">Bab 6: Aku Lapar!: J’ai faim!</h4>
+            <ul class="list-none text-slate-400 mt-4">
+              <li class="mb-1 flex">
+                <i class="uil uil-check-circle text-indigo-600 text-xl mr-2"></i> Di Dapur: Dans la cuisine
+              </li>
+              <li class="mb-1 flex">
+                <i class="uil uil-check-circle text-indigo-600 text-xl mr-2"></i> Menyiapkan Makanan: Préparer un repas
+              </li>
+              <li class="mb-1 flex">
+                <i class="uil uil-check-circle text-indigo-600 text-xl mr-2"></i> Minuman: Les boissons
+              </li>
+              <li class="mb-1 flex">
+                <i class="uil uil-check-circle text-indigo-600 text-xl mr-2"></i> Di Meja Makan: A table
+              </li>
+              <li class="mb-1 flex">
+                <i class="uil uil-check-circle text-indigo-600 text-xl mr-2"></i> Di Restoran: Au restaurant
+              </li>
+              <li class="mb-1 flex">
+                <i class="uil uil-check-circle text-indigo-600 text-xl mr-2"></i> Wah, Enak Sekali!: Miam, miam, c’est bon!
+              </li>
+            </ul>
+          </div>
+          <div class="lg:ml-8">
+            <h4 class="mb-4 text-2xl leading-normal font-medium">Bab 7: Pergi ke Kota: Aller en ville</h4>
+            <ul class="list-none text-slate-400 mt-4">
+              <li class="mb-1 flex">
+                <i class="uil uil-check-circle text-indigo-600 text-xl mr-2"></i> Transportasi: Les transports
+              </li>
+              <li class="mb-1 flex">
+                <i class="uil uil-check-circle text-indigo-600 text-xl mr-2"></i> Bertanya Arah: Demander son chemin
+              </li>
+              <li class="mb-1 flex">
+                <i class="uil uil-check-circle text-indigo-600 text-xl mr-2"></i> Menghabiskan Uang: Dépenser de l’argent
+              </li>
+              <li class="mb-1 flex">
+                <i class="uil uil-check-circle text-indigo-600 text-xl mr-2"></i> Menjaga Uang Anda: Garder son argent en securité
+              </li>
+              <li class="mb-1 flex">
+                <i class="uil uil-check-circle text-indigo-600 text-xl mr-2"></i> Minta Bantuan: Demander de l’aide
+              </li>
+              <li class="mb-1 flex">
+                <i class="uil uil-check-circle text-indigo-600 text-xl mr-2"></i> Kegiatan: Activités
+              </li>
+            </ul>
+          </div>
+          <div class="lg:ml-8">
+            <h4 class="mb-4 text-2xl leading-normal font-medium">Bab 8: Ayo ke Luar: Allons dehors</h4>
+            <ul class="list-none text-slate-400 mt-4">
+              <li class="mb-1 flex">
+                <i class="uil uil-check-circle text-indigo-600 text-xl mr-2"></i> Di Taman: Dans le jardin
+              </li>
+              <li class="mb-1 flex">
+                <i class="uil uil-check-circle text-indigo-600 text-xl mr-2"></i> Pohon dan Bunga: Arbres et fleurs
+              </li>
+              <li class="mb-1 flex">
+                <i class="uil uil-check-circle text-indigo-600 text-xl mr-2"></i> Di Pantai: A la plage
+              </li>
+              <li class="mb-1 flex">
+                <i class="uil uil-check-circle text-indigo-600 text-xl mr-2"></i> Di Sungai: Au bord de la rivière
+              </li>
+              <li class="mb-1 flex">
+                <i class="uil uil-check-circle text-indigo-600 text-xl mr-2"></i> Di Kebun Binatang: Au zoo
+              </li>
+              <li class="mb-1 flex">
+                <i class="uil uil-check-circle text-indigo-600 text-xl mr-2"></i> Di Ternak: A la ferme
+              </li>
+            </ul>
+          </div>
+          <div class="lg:ml-8">
+            <h4 class="mb-4 text-2xl leading-normal font-medium">Bab 9: Berhubungan: Bien s’entendre</h4>
+            <ul class="list-none text-slate-400 mt-4">
+              <li class="mb-1 flex">
+                <i class="uil uil-check-circle text-indigo-600 text-xl mr-2"></i> Sahabat: Les meilleurs amis
+              </li>
+              <li class="mb-1 flex">
+                <i class="uil uil-check-circle text-indigo-600 text-xl mr-2"></i> Mengekspresikan Perasaan: Exprimer ses sentiments
+              </li>
+              <li class="mb-1 flex">
+                <i class="uil uil-check-circle text-indigo-600 text-xl mr-2"></i> Menghormati Teman: Respecter ses amis
+              </li>
+              <li class="mb-1 flex">
+                <i class="uil uil-check-circle text-indigo-600 text-xl mr-2"></i> Menyelesaikan Masalah: Régler des problèmes
+              </li>
+              <li class="mb-1 flex">
+                <i class="uil uil-check-circle text-indigo-600 text-xl mr-2"></i> Berdamai: Se réconcilier
+              </li>
+              <li class="mb-1 flex">
+                <i class="uil uil-check-circle text-indigo-600 text-xl mr-2"></i> Pacar: Amoureux et amoureuses
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <!--end container-->
+    </section>
+    <!--end section-->
     <!-- End -->
-
     <!-- Start -->
     <section id="testimoni" class="relative md:py-24 py-16">
-        <div class="container">
-            <div class="grid grid-cols-1 pb-8 text-center">
-                <!-- <h6 class="mb-4 text-base font-medium text-indigo-600">Testimoni</h6> -->
-                <h3 class="mb-6 md:text-3xl text-2xl md:leading-normal leading-normal font-semibold">Apa yang customer
-                    bilang tentang Anah?</h3>
-                <p class="text-slate-400 max-w-xl mx-auto">Testimoni seputar bahasa perancis</p>
-            </div><!--end grid-->
-
-            <div class="grid relative grid-cols-1 mt-8">
-                <div class="tiny-two-item">
-                    <div class="tiny-slide">
-                        <div
-                            class="lg:flex p-6 lg:p-0 relative rounded-md shadow dark:shadow-gray-800 overflow-hidden m-2">
-                            <img class="w-24 h-24 lg:w-48 lg:h-auto lg:rounded-none rounded-full mx-auto"
-                                src="assets/images/client/01.jpg" alt="" width="384" height="512">
-                            <div class="pt-6 lg:p-6 text-center lg:text-left space-y-4">
-                                <p class="text-base text-slate-400"> "Merci pour ton soutien durant ces derniers jours.
-                                    T'es vraiment une personne génial. Il n'y en a pas beaucoup qui ont ton talent" </p>
-                                <div>
-                                    <span class="text-indigo-600 block mb-1">OICCA Youth Delegation, Cameroon</span>
-                                    <span class="text-slate-400 text-sm dark:text-white/60 block">Anah Sebagai Liaison
-                                        Officer, 2023</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="tiny-slide">
-                        <div class="lg:flex p-6 lg:p-0 relative rounded-md shadow dark:shadow-gray-800 overflow-hidden m-2">
-                            <img class="w-24 h-24 lg:w-48 lg:h-auto lg:rounded-none mx-auto" src="assets/images/client/3df.png"
-                                alt="" width="384" height="512">
-                            <div class="pt-6 lg:p-6 text-center lg:text-left space-y-4">
-                                <p class="text-base text-slate-400"> "xxx" </p>
-                                <div>
-                                    <span class="text-indigo-600 block mb-1">WNI di Madagaskar, Negara francophone</span>
-                                    <span class="text-slate-400 text-sm dark:text-white/60 block">Anah Sebagai Guru les privat, 2022</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="tiny-slide">
-                        <div class="lg:flex p-6 lg:p-0 relative rounded-md shadow dark:shadow-gray-800 overflow-hidden m-2">
-                            <img class="w-24 h-24 lg:w-48 lg:h-auto lg:rounded-none mx-auto" src="assets/images/client/3df2.png" alt=""
-                                width="384" height="512">
-                            <div class="pt-6 lg:p-6 text-center lg:text-left space-y-4">
-                                <p class="text-base text-slate-400"> "xxx" </p>
-                                <div>
-                                    <span class="text-indigo-600 block mb-1">WNI di Madagaskar, Negara francophone</span>
-                                    <span class="text-slate-400 text-sm dark:text-white/60 block">Anah Sebagai Guru les privat, 2021-2022</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- <div class="tiny-slide">
-                        <div class="lg:flex p-6 lg:p-0 relative rounded-md shadow dark:shadow-gray-800 overflow-hidden m-2">
-                            <img class="w-24 h-24 lg:w-48 lg:h-auto lg:rounded-none rounded-full mx-auto"
-                                src="assets/images/client/01.jpg" alt="" width="384" height="512">
-                            <div class="pt-6 lg:p-6 text-center lg:text-left space-y-4">
-                                <p class="text-base text-slate-400"> "xxx" </p>
-                                <div>
-                                    <span class="text-indigo-600 block mb-1">xxx</span>
-                                    <span class="text-slate-400 text-sm dark:text-white/60 block">Anah Sebagai xxx</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div> -->
-                    <!-- <div class="tiny-slide">
-                        <div
-                            class="lg:flex p-6 lg:p-0 relative rounded-md shadow dark:shadow-gray-800 overflow-hidden m-2">
-                            <img class="w-24 h-24 lg:w-48 lg:h-auto lg:rounded-none rounded-full mx-auto"
-                                src="assets/images/client/02.jpg" alt="" width="384" height="512">
-                            <div class="pt-6 lg:p-6 text-center lg:text-left space-y-4">
-                                <p class="text-base text-slate-400"> " The most well-known dummy text is the 'Lorem
-                                    Ipsum',
-                                    which is said to have originated in the 16th century. " </p>
-
-                                <div>
-                                    <span class="text-indigo-600 block mb-1">Carl Oliver</span>
-                                    <span class="text-slate-400 text-sm dark:text-white/60 block">Staff Engineer,
-                                        Algolia</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div> -->
-                </div>
-            </div><!--end grid-->
-        </div><!--end container-->
-
-    </section><!--end section-->
-    <div class="relative">
-        <div
-            class="shape absolute right-0 sm:-bottom-px -bottom-[2px] left-0 overflow-hidden z-1 text-gray-50 dark:text-slate-800">
-            <svg class="w-full h-auto" viewBox="0 0 2880 250" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M720 125L2160 0H2880V250H0V125H720Z" fill="currentColor"></path>
-            </svg>
+      <div class="container">
+        <div class="grid grid-cols-1 pb-8 text-center">
+          <!-- <h6 class="mb-4 text-base font-medium text-indigo-600">Testimoni</h6> -->
+          <h3 class="mb-6 md:text-3xl text-2xl md:leading-normal leading-normal font-semibold">Apa yang customer bilang tentang Anah? </h3>
+          <p class="text-slate-400 max-w-xl mx-auto">Testimoni seputar bahasa perancis</p>
         </div>
+        <!--end grid-->
+        <div class="grid relative grid-cols-1 mt-8">
+          <div class="tiny-two-item">
+            <div class="tiny-slide">
+              <div class="lg:flex p-6 lg:p-0 relative rounded-md shadow dark:shadow-gray-800 overflow-hidden m-2">
+                <img class="w-24 h-24 lg:w-48 lg:h-auto lg:rounded-none rounded-full mx-auto" src="assets/images/client/01.jpg" alt="" width="384" height="512">
+                <div class="pt-6 lg:p-6 text-center lg:text-left space-y-4">
+                  <p class="text-base text-slate-400"> "Merci pour ton soutien durant ces derniers jours. T'es vraiment une personne génial. Il n'y en a pas beaucoup qui ont ton talent" </p>
+                  <div>
+                    <span class="text-indigo-600 block mb-1">OICCA Youth Delegation, Cameroon</span>
+                    <span class="text-slate-400 text-sm dark:text-white/60 block">Anah Sebagai Liaison Officer, 2023</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="tiny-slide">
+              <div class="lg:flex p-6 lg:p-0 relative rounded-md shadow dark:shadow-gray-800 overflow-hidden m-2">
+                <img class="w-24 h-24 lg:w-48 lg:h-auto lg:rounded-none mx-auto" src="assets/images/client/3df.png" alt="" width="384" height="512">
+                <div class="pt-6 lg:p-6 text-center lg:text-left space-y-4">
+                  <p class="text-base text-slate-400"> "xxx" </p>
+                  <div>
+                    <span class="text-indigo-600 block mb-1">WNI di Madagaskar, Negara francophone</span>
+                    <span class="text-slate-400 text-sm dark:text-white/60 block">Anah Sebagai Guru les privat, 2022</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="tiny-slide">
+              <div class="lg:flex p-6 lg:p-0 relative rounded-md shadow dark:shadow-gray-800 overflow-hidden m-2">
+                <img class="w-24 h-24 lg:w-48 lg:h-auto lg:rounded-none mx-auto" src="assets/images/client/3df2.png" alt="" width="384" height="512">
+                <div class="pt-6 lg:p-6 text-center lg:text-left space-y-4">
+                  <p class="text-base text-slate-400"> "xxx" </p>
+                  <div>
+                    <span class="text-indigo-600 block mb-1">WNI di Madagaskar, Negara francophone</span>
+                    <span class="text-slate-400 text-sm dark:text-white/60 block">Anah Sebagai Guru les privat, 2021-2022</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- <div class="tiny-slide"><div class="lg:flex p-6 lg:p-0 relative rounded-md shadow dark:shadow-gray-800 overflow-hidden m-2"><img class="w-24 h-24 lg:w-48 lg:h-auto lg:rounded-none rounded-full mx-auto"
+							        src="assets/images/client/01.jpg" alt="" width="384" height="512"><div class="pt-6 lg:p-6 text-center lg:text-left space-y-4"><p class="text-base text-slate-400"> "xxx" </p><div><span class="text-indigo-600 block mb-1">xxx</span><span class="text-slate-400 text-sm dark:text-white/60 block">Anah Sebagai xxx</span></div></div></div></div> -->
+            <!-- <div class="tiny-slide"><div
+							    class="lg:flex p-6 lg:p-0 relative rounded-md shadow dark:shadow-gray-800 overflow-hidden m-2"><img class="w-24 h-24 lg:w-48 lg:h-auto lg:rounded-none rounded-full mx-auto"
+							        src="assets/images/client/02.jpg" alt="" width="384" height="512"><div class="pt-6 lg:p-6 text-center lg:text-left space-y-4"><p class="text-base text-slate-400"> " The most well-known dummy text is the 'Lorem
+							            Ipsum',
+							            which is said to have originated in the 16th century. " </p><div><span class="text-indigo-600 block mb-1">Carl Oliver</span><span class="text-slate-400 text-sm dark:text-white/60 block">Staff Engineer,
+							                Algolia</span></div></div></div></div> -->
+          </div>
+        </div>
+        <!--end grid-->
+      </div>
+      <!--end container-->
+    </section>
+    <!--end section-->
+    <div class="relative">
+      <div class="shape absolute right-0 sm:-bottom-px -bottom-[2px] left-0 overflow-hidden z-1 text-gray-50 dark:text-slate-800">
+        <svg class="w-full h-auto" viewBox="0 0 2880 250" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M720 125L2160 0H2880V250H0V125H720Z" fill="currentColor"></path>
+        </svg>
+      </div>
     </div>
     <!-- End -->
-
     <!-- Start -->
     <section id="faq" class="relative md:py-24 py-16 bg-gray-50 dark:bg-slate-800">
-        <div class="container">
-            <div class="grid md:grid-cols-2 grid-cols-1 gap-[30px]">
-                <div class="flex">
-                    <i data-feather="help-circle" class="fea icon-ex-md text-indigo-600 mr-3"></i>
-                    <div class="flex-1">
-                        <h5 class="mb-2 text-xl font-semibold">Apa itu <span class="text-indigo-600">Belajar
-                                prancis</span> ?
-                        </h5>
-                        <p class="text-slate-400">Sebuah Program kursus bahasa prancis online yang dibuka untuk Umum
-                            dari usia 8 Tahun hingga usia
-                            dewasa. Pelajar akan dibimbing mulai dari dasar sampai menguasai Skill berbahasa.</p>
-                    </div>
-                </div>
-
-                <div class="flex">
-                    <i data-feather="help-circle" class="fea icon-ex-md text-indigo-600 mr-3"></i>
-                    <div class="flex-1">
-                        <h5 class="mb-2 text-xl font-semibold"> Apa saja materi yang di sampaikan ?</h5>
-                        <p class="text-slate-400">Praktek Percakapan, Hafalan Ratusan kosa-kata, Pidato Bahasa Prancis,
-                            Quotes Bahasa Prancis, Lagu-lagu Bahasa Prancis, Games Bahasa Prancis.</p>
-                    </div>
-                </div>
-
-                <div class="flex">
-                    <i data-feather="help-circle" class="fea icon-ex-md text-indigo-600 mr-3"></i>
-                    <div class="flex-1">
-                        <h5 class="mb-2 text-xl font-semibold"> Sistem Belajarnya Bagaimana ?</h5>
-                        <p class="text-slate-400">Teman-teman akan belajar (terdiri dari 9 chapter) dimana 1 chapter
-                            bisa di selesaikan dalam waktu 1 bulan</p>
-                        <p class="text-slate-400">Seminggu 2x Zoom.</p>
-                        <p class="text-slate-400">Sekali pertemuan 90 Menit.</p>
-                        <p class="text-slate-400">Senin, Rabu 19.30-21.00.</p>
-                        <p class="text-slate-400">Selasa, Kamis, Sabtu mengumpulkan tugas, penilaian-penilaian dan
-                            konsultasi di Group Whatsapp</p>
-                    </div>
-                </div>
-
-                <div class="flex">
-                    <i data-feather="help-circle" class="fea icon-ex-md text-indigo-600 mr-3"></i>
-                    <div class="flex-1">
-                        <h5 class="mb-2 text-xl font-semibold"> Fasilitasnya apa saja ?</h5>
-                        <p class="text-slate-400">Video Tutorial Per- BAB,
-                            PDF Materi Kelas Online,
-                            Puluhan Poster,
-                            Rekaman Kelas Zoom,
-                            Seminar Online,
-                            Ratusan E-Book Bahasa Prancis,
-                            Konsultasi Group Telegram</p>
-                    </div>
-                </div>
-            </div><!--end grid-->
-        </div><!--end container-->
-
-        <div id="kontak" class="container md:mt-24 mt-16 md:mb-12">
-            <div class="grid grid-cols-1 text-center">
-                <h3 class="mb-6 md:text-3xl text-2xl md:leading-normal leading-normal font-semibold">Nunggu apa lagi?
-                </h3>
-
-                <p class="text-slate-400 max-w-xl mx-auto">Hubungi Anah saja dulu!</p>
-
-                <div class="mt-6">
-                    <a href="https://api.whatsapp.com/send?phone=6287772897512&text=Hallo%20Belajar%20Prancis"
-                        class="btn bg-indigo-600 hover:bg-indigo-700 border-indigo-600 hover:border-indigo-700 text-white rounded-md mr-2 mt-2"><i
-                            class="uil uil-phone"></i> Contact us</a>
-                </div>
-            </div><!--end grid-->
-        </div><!--end container-->
-    </section><!--end section-->
+      <div class="container">
+        <div class="grid md:grid-cols-2 grid-cols-1 gap-[30px]">
+          <div class="flex">
+            <i data-feather="help-circle" class="fea icon-ex-md text-indigo-600 mr-3"></i>
+            <div class="flex-1">
+              <h5 class="mb-2 text-xl font-semibold">Apa itu <span class="text-indigo-600">Belajar prancis</span> ? </h5>
+              <p class="text-slate-400">Sebuah Program kursus bahasa prancis online yang dibuka untuk Umum dari usia 8 Tahun hingga usia dewasa. Pelajar akan dibimbing mulai dari dasar sampai menguasai Skill berbahasa. </p>
+            </div>
+          </div>
+          <div class="flex">
+            <i data-feather="help-circle" class="fea icon-ex-md text-indigo-600 mr-3"></i>
+            <div class="flex-1">
+              <h5 class="mb-2 text-xl font-semibold"> Apa saja materi yang di sampaikan ?</h5>
+              <p class="text-slate-400">Praktek Percakapan, Hafalan Ratusan kosa-kata, Pidato Bahasa Prancis, Quotes Bahasa Prancis, Lagu-lagu Bahasa Prancis, Games Bahasa Prancis. </p>
+            </div>
+          </div>
+          <div class="flex">
+            <i data-feather="help-circle" class="fea icon-ex-md text-indigo-600 mr-3"></i>
+            <div class="flex-1">
+              <h5 class="mb-2 text-xl font-semibold"> Sistem Belajarnya Bagaimana ?</h5>
+              <p class="text-slate-400">Teman-teman akan belajar (terdiri dari 9 chapter) dimana 1 chapter bisa di selesaikan dalam waktu 1 bulan </p>
+              <p class="text-slate-400">Seminggu 2x Zoom.</p>
+              <p class="text-slate-400">Sekali pertemuan 90 Menit.</p>
+              <p class="text-slate-400">Senin, Rabu 19.30-21.00.</p>
+              <p class="text-slate-400">Selasa, Kamis, Sabtu mengumpulkan tugas, penilaian-penilaian dan konsultasi di Group Whatsapp </p>
+            </div>
+          </div>
+          <div class="flex">
+            <i data-feather="help-circle" class="fea icon-ex-md text-indigo-600 mr-3"></i>
+            <div class="flex-1">
+              <h5 class="mb-2 text-xl font-semibold"> Fasilitasnya apa saja ?</h5>
+              <p class="text-slate-400">Video Tutorial Per- BAB, PDF Materi Kelas Online, Puluhan Poster, Rekaman Kelas Zoom, Seminar Online, Ratusan E-Book Bahasa Prancis, Konsultasi Group Telegram </p>
+            </div>
+          </div>
+        </div>
+        <!--end grid-->
+      </div>
+      <!--end container-->
+      <div id="kontak" class="container md:mt-24 mt-16 md:mb-12">
+        <div class="grid grid-cols-1 text-center">
+          <h3 class="mb-6 md:text-3xl text-2xl md:leading-normal leading-normal font-semibold">Nunggu apa lagi? </h3>
+          <p class="text-slate-400 max-w-xl mx-auto">Hubungi Anah saja dulu!</p>
+          <div class="mt-6">
+            <a href="https://api.whatsapp.com/send?phone=6287772897512&text=Hallo%20Belajar%20Prancis" class="btn bg-indigo-600 hover:bg-indigo-700 border-indigo-600 hover:border-indigo-700 text-white rounded-md mr-2 mt-2">
+              <i class="uil uil-phone"></i> Contact us </a>
+          </div>
+        </div>
+        <!--end grid-->
+      </div>
+      <!--end container-->
+    </section>
+    <!--end section-->
     <!-- Footer Start -->
+    <!-- <div id="embed-iframe"></div> -->
     <footer class="footer bg-dark-footer relative text-gray-200 dark:text-gray-200">
-        <div class="py-[30px] px-0 border-t border-slate-800">
-            <div class="container text-center">
-                <div class="grid md:grid-cols-3 grid-cols-1 items-center">
-                    <div class="md:text-left text-center">
-                        <a href="#" class="text-[22px] focus:outline-none">
-                            <img src="assets/images/logo-light.png" class="mx-auto md:mr-auto md:ml-0" alt="">
-                        </a>
-                    </div>
-
-                    <div class="text-center mt-6 md:mt-0">
-                        <p class="mb-0">©
-                            <script>document.write(new Date().getFullYear())</script> Belajar Prancis. Made by
-                            <a href="https://api.whatsapp.com/send?phone=6287772897512&text=Hallo%20z-anah,%20saya%20ingin%20membuat%20aplikasi/website"
-                                target="_blank" class="text-reset">z-anah</a>.
-                        </p>
-                    </div>
-
-                    <ul class="list-none md:text-right text-center mt-6 md:mt-0">
-                        <li class="inline"><a
-                                href="https://api.whatsapp.com/send?phone=6287772897512&text=Hallo%20Belajar%20Prancis"
-                                target="_blank"
-                                class="btn btn-icon btn-sm border border-gray-800 rounded-md hover:border-indigo-600 dark:hover:border-indigo-600 hover:bg-indigo-600 dark:hover:bg-indigo-600"><i
-                                    class="uil uil-whatsapp align-middle" title="Buy Now"></i></a></li>
-                        <li class="inline"><a href="https://www.instagram.com/zulmianah/" target="_blank"
-                                class="btn btn-icon btn-sm border border-gray-800 rounded-md hover:border-indigo-600 dark:hover:border-indigo-600 hover:bg-indigo-600 dark:hover:bg-indigo-600"><i
-                                    class="uil uil-instagram align-middle" title="instagram"></i></a></li>
-                    </ul><!--end icon-->
-                </div><!--end grid-->
-            </div><!--end container-->
+      <div class="py-[30px] px-0 border-t border-slate-800">
+        <div class="container text-center">
+          <div class="grid md:grid-cols-3 grid-cols-1 items-center">
+            <div class="md:text-left text-center">
+              <a href="#" class="text-[22px] focus:outline-none">
+                <img src="assets/images/logo-light.png" class="mx-auto md:mr-auto md:ml-0" alt="">
+              </a>
+            </div>
+            <div class="text-center mt-6 md:mt-0">
+              <p class="mb-0"> © <script>
+                  document.write(new Date().getFullYear())
+                </script> Belajar Prancis. Made by <a href="https://api.whatsapp.com/send?phone=6287772897512&text=Hallo%20z-anah,%20saya%20ingin%20membuat%20aplikasi/website" target="_blank" class="text-reset">z-anah</a>. </p>
+            </div>
+            <ul class="list-none md:text-right text-center mt-6 md:mt-0">
+              <li class="inline">
+                <a href="https://api.whatsapp.com/send?phone=6287772897512&text=Hallo%20Belajar%20Prancis" target="_blank" class="btn btn-icon btn-sm border border-gray-800 rounded-md hover:border-indigo-600 dark:hover:border-indigo-600 hover:bg-indigo-600 dark:hover:bg-indigo-600">
+                  <i class="uil uil-whatsapp align-middle" title="Buy Now"></i>
+                </a>
+              </li>
+              <li class="inline">
+                <a href="https://www.instagram.com/zulmianah/" target="_blank" class="btn btn-icon btn-sm border border-gray-800 rounded-md hover:border-indigo-600 dark:hover:border-indigo-600 hover:bg-indigo-600 dark:hover:bg-indigo-600">
+                  <i class="uil uil-instagram align-middle" title="instagram"></i>
+                </a>
+              </li>
+            </ul>
+            <!--end icon-->
+          </div>
+          <!--end grid-->
         </div>
-    </footer><!--end footer-->
+        <!--end container-->
+      </div>
+    </footer>
+    <!--end footer-->
     <!-- Footer End -->
-
-
-    <div
-        class="cookie-popup fixed max-w-lg bottom-3 right-3 left-3 sm:left-0 sm:right-0 mx-auto bg-white dark:bg-slate-900 shadow dark:shadow-gray-800 rounded-md py-5 px-6 z-10">
-        <p class="text-slate-400">Want a website that wows? z-anah is just a click away.
-            <br>
-            <a href="https://api.whatsapp.com/send?phone=6287772897512&text=Hallo%20z-anah,%20saya%20ingin%20membuat%20aplikasi/website"
-                target="_blank" class="text-indigo-600 dark:text-indigo-500 font-semibold">Contact z-anah</a>
-        </p>
-        <div class="cookie-popup-actions text-right">
-            <button class="absolute border-none bg-none p-0 cursor-pointer font-semibold top-2 right-2"><i
-                    class="uil uil-times text-dark dark:text-slate-200 text-2xl"></i></button>
-        </div>
+    <div class="cookie-popup fixed max-w-lg bottom-3 right-3 left-3 sm:left-0 sm:right-0 mx-auto bg-white dark:bg-slate-900 shadow dark:shadow-gray-800 rounded-md py-5 px-6 z-10">
+      <p class="text-slate-400">Want a website that wows? z-anah is just a click away. <br>
+        <a href="https://api.whatsapp.com/send?phone=6287772897512&text=Hallo%20z-anah,%20saya%20ingin%20membuat%20aplikasi/website" target="_blank" class="text-indigo-600 dark:text-indigo-500 font-semibold">Contact z-anah</a>
+      </p>
+      <div class="cookie-popup-actions text-right">
+        <button class="absolute border-none bg-none p-0 cursor-pointer font-semibold top-2 right-2">
+          <i class="uil uil-times text-dark dark:text-slate-200 text-2xl"></i>
+        </button>
+      </div>
     </div>
-
     <!-- Back to top -->
-    <a href="#" onclick="topFunction()" id="back-to-top"
-        class="back-to-top fixed hidden text-lg rounded-full z-10 bottom-5 right-5 h-9 w-9 text-center bg-indigo-600 text-white leading-9"><i
-            class="uil uil-arrow-up"></i></a>
+    <a href="#" onclick="topFunction()" id="back-to-top" class="back-to-top fixed hidden text-lg rounded-full z-10 bottom-5 right-5 h-9 w-9 text-center bg-indigo-600 text-white leading-9">
+      <i class="uil uil-arrow-up"></i>
+    </a>
     <!-- Back to top -->
-
     <!-- Switcher -->
     <div class="fixed top-1/4 -right-1 z-3">
-        <span class="relative inline-block rotate-90">
-            <input type="checkbox" class="checkbox opacity-0 absolute" id="chk" />
-            <label
-                class="label bg-slate-900 dark:bg-white shadow dark:shadow-gray-800 cursor-pointer rounded-full flex justify-between items-center p-1 w-14 h-8"
-                for="chk">
-                <i class="uil uil-moon text-[20px] text-yellow-500"></i>
-                <i class="uil uil-sun text-[20px] text-yellow-500"></i>
-                <span class="ball bg-white dark:bg-slate-900 rounded-full absolute top-[2px] left-[2px] w-7 h-7"></span>
-            </label>
-        </span>
+      <span class="relative inline-block rotate-90">
+        <input type="checkbox" class="checkbox opacity-0 absolute" id="chk" />
+        <label class="label bg-slate-900 dark:bg-white shadow dark:shadow-gray-800 cursor-pointer rounded-full flex justify-between items-center p-1 w-14 h-8" for="chk">
+          <i class="uil uil-moon text-[20px] text-yellow-500"></i>
+          <i class="uil uil-sun text-[20px] text-yellow-500"></i>
+          <span class="ball bg-white dark:bg-slate-900 rounded-full absolute top-[2px] left-[2px] w-7 h-7"></span>
+        </label>
+      </span>
     </div>
     <!-- Switcher -->
-
     <!-- JAVASCRIPTS -->
     <script src="assets/libs/tobii/js/tobii.min.js"></script>
     <script src="assets/libs/jarallax/jarallax.min.js"></script>
@@ -585,9 +570,6 @@
     <script src="assets/js/plugins.init.js"></script>
     <script src="assets/js/app.js"></script>
     <!-- JAVASCRIPTS -->
-</body>
-
-
-<!-- Mirrored from shreethemes.in/techwind/layouts/index-personal.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 27 Aug 2022 16:41:29 GMT -->
-
+  </body>
+  <!-- Mirrored from shreethemes.in/techwind/layouts/index-personal.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 27 Aug 2022 16:41:29 GMT -->
 </html>
